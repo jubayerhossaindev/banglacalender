@@ -25,3 +25,6 @@ coverage
 *.sw?
 .npmrc
 .env
+
+# OS
+Thumbs.db
