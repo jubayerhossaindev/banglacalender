@@ -1,3 +1,9 @@
+## [1.1.2](https://github.com/jubayerhossaindev/banglacalender/compare/v1.1.1...v1.1.2) (2026-03-17)
+
+### Bug Fixes
+
+- remove .tsx extension from import ([a984450](https://github.com/jubayerhossaindev/banglacalender/commit/a98445092b727fe0b9f0072575efd1f27b1aa417))
+
 ## [1.1.1](https://github.com/jubayerhossaindev/banglacalender/compare/v1.1.0...v1.1.1) (2026-03-17)
 
 ### Bug Fixes
