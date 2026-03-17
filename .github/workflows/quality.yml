@@ -1,0 +1,107 @@
+name: Code Quality
+
+on:
+  push:
+    branches: [main, master, develop]
+  pull_request:
+    branches: [main, master, develop]
+
+concurrency:
+  group: quality-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  NODE_VERSION: 22
+  PNPM_VERSION: 10
+
+jobs:
+  code-quality:
+    name: Code Quality Analysis
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4.4.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run tests with coverage
+        run: pnpm run test:coverage
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+# name: Code Quality
+
+# on:
+#   push:
+#     branches: [main, master, develop]
+#   pull_request:
+#     branches: [main, master, develop]
+
+# concurrency:
+#   group: quality-${{ github.ref }}
+#   cancel-in-progress: true
+
+# permissions:
+#   contents: read
+
+# env:
+#   NODE_VERSION: 22
+#   PNPM_VERSION: 10
+
+# jobs:
+#   code-quality:
+#     name: Code Quality Analysis
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4.2.2
+#         with:
+#           fetch-depth: 0
+
+#       - name: Enable Corepack
+#         run: corepack enable
+
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v4.4.0
+#         with:
+#           node-version: ${{ env.NODE_VERSION }}
+#           cache: pnpm
+
+#       - name: Setup pnpm
+#         uses: pnpm/action-setup@v4
+#         with:
+#           version: ${{ env.PNPM_VERSION }}
+
+#       - name: Install dependencies
+#         run: pnpm install --frozen-lockfile
+
+#       - name: Run tests with coverage
+#         run: pnpm run test:coverage
+
+#         # - name: SonarCloud Scan
+#         #   uses: SonarSource/sonarqube-scan-action@v2
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         continue-on-error: true

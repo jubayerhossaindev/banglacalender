@@ -1,0 +1,47 @@
+# EditorConfig helps maintain consistent coding styles between editors
+# https://editorconfig.org
+
+root = true
+
+# ===============================
+# Default settings (all files)
+# ===============================
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+tab_width = 2
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# ===============================
+# JavaScript / TypeScript
+# ===============================
+[*.{js,jsx,ts,tsx,mjs,cjs}]
+max_line_length = 100
+
+# ===============================
+# JSON
+# ===============================
+[*.json]
+indent_size = 2
+
+# ===============================
+# Styles
+# ===============================
+[*.{css,scss}]
+indent_size = 2
+
+# ===============================
+# Config / YAML
+# ===============================
+[*.{yml,yaml}]
+indent_size = 2
+
+# ===============================
+# Markdown
+# ===============================
+[*.md]
+trim_trailing_whitespace = false
+max_line_length = off

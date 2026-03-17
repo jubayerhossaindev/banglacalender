@@ -1,0 +1,13 @@
+# Default owner for the entire repository
+* @jubayerhossaindev
+
+# Workflow files
+.github/workflows/* @jubayerhossaindev
+
+# Documentation
+*.md @jubayerhossaindev
+
+# Config files
+*.json @jubayerhossaindev
+*.yml @jubayerhossaindev
+*.yaml @jubayerhossaindev
