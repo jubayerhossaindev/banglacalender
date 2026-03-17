@@ -1,3 +1,9 @@
+## [1.1.1](https://github.com/jubayerhossaindev/banglacalender/compare/v1.1.0...v1.1.1) (2026-03-17)
+
+### Bug Fixes
+
+- update index.html meta tags and add SPA routing ([4089a90](https://github.com/jubayerhossaindev/banglacalender/commit/4089a90c5e75cb78268d4bdc4e0d57754ba5468c))
+
 # [1.1.0](https://github.com/jubayerhossaindev/banglacalender/compare/v1.0.0...v1.1.0) (2026-03-17)
 
 ### Features
