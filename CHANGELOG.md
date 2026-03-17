@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/jubayerhossaindev/banglacalender/compare/v1.0.0...v1.1.0) (2026-03-17)
+
+### Features
+
+- add GitHub Pages deployment ([dd8d942](https://github.com/jubayerhossaindev/banglacalender/commit/dd8d94246166af1399a3125a9e07ee8b2a66b9cc))
+- add GitHub Pages deployment ([0e0247e](https://github.com/jubayerhossaindev/banglacalender/commit/0e0247e7c2e60dc6749e20ced373c9557bb35649))
+
 # 1.0.0 (2026-03-17)
 
 ### Features
